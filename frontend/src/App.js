@@ -4,6 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
 
+//user components:
+import RoutesWithUserChatComponent from "./components/user/RoutesWithUserChatComponent";
+
 // publicly available pages:
 import HomePage from "./pages/HomePage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
@@ -36,16 +39,17 @@ function App() {
     <BrowserRouter>
       <HeaderComponent />
       <Routes>
-        {/* publicly available routes: */}
-        <Route path="/" element={<HomePage />} />
-        <Route path="/product-list" element={<ProductListPage />} />
-        <Route path="/product-details" element={<ProductDetailsPage />} />
-        <Route path="/product-details/:id" element={<ProductDetailsPage />} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="*" element="Page not exists 404" />
-
+        <Route element={<RoutesWithUserChatComponent />}>
+          {/* publicly available routes: */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/product-list" element={<ProductListPage />} />
+          <Route path="/product-details" element={<ProductDetailsPage />} />
+          <Route path="/product-details/:id" element={<ProductDetailsPage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="*" element="Page not exists 404" />
+        </Route>
         {/* <Route path="/" component={HomePage} />  in previous versions of react-router-dom */}
 
         {/* user protected routes: */}
