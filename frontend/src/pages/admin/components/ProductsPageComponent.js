@@ -32,7 +32,7 @@ const ProductsPageComponent = ({ fetchProducts, deleteProduct }) => {
         // ])
       );
     return () => abctrl.abort();
-  }, [productDeleted]);
+  }, [productDeleted, fetchProducts, dispatch]);
 
   return (
     <Row className="m-5">

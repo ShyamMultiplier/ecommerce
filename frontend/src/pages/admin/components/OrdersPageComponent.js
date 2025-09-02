@@ -19,7 +19,7 @@ const OrdersPageComponent = ({ getOrders }) => {
         //   er.response.data.message ? er.response.data.message : er.response.data
         // )
       );
-  }, []);
+  }, [dispatch, getOrders]);
   
   return (
     <Row className="m-5">

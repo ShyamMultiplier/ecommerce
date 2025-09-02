@@ -9,7 +9,7 @@
   height: 50px;
   color: #fff;
   font-size: 22px;
-  z-index: 2;
+  z-index: 10000; /* keep on top of everything */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,20 +31,22 @@
   display: none !important;
 }
 
-#check:checked ~ .chat-wrapper {
-  opacity: 1;
-}
-
 .chat-wrapper {
-  opacity: 0;
+  display: none;   /* hidden by default */
   position: fixed;
   right: 20px;
   bottom: 100px;
-  z-index: 2;
+  top: 70px;  /* 👈 push chat below the header (56px + margin) */
+  z-index: 9999;
   width: 300px;
-  transition: all 0.4s;
   background-color: #fff;
   border-radius: 5px;
+  transition: all 0.4s;
+  max-height: calc(100vh - 100px); /* prevent overflow */
+}
+
+#check:checked ~ .chat-wrapper {
+  display: block;  /* show when checked */
 }
 
 .chat-header {
@@ -78,4 +80,3 @@
   max-height: 300px;
   overflow: auto;
 }
-

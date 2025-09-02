@@ -32,7 +32,7 @@ const UsersPageComponent = ({ fetchUsers, deleteUser }) => {
         // )
       );
     return () => abctrl.abort();
-  }, [userDeleted]);
+  }, [userDeleted, fetchUsers, dispatch]);
 
   return (
     <Row className="m-5">
