@@ -10,12 +10,12 @@ export const uploadImagesApiRequest = async (images, productId) => {
 };
 
 export const uploadImagesCloudinaryApiRequest = (images,productId) => {
-    const url = "https://api.cloudinary.com/v1_1/jkhbnc-366gs/image/upload";
+    const url = "https://api.cloudinary.com/v1_1/santhosh2058/image/upload";
     const formData = new FormData();
     for (let i = 0; i < images.length; i++) {
         let file = images[i];
         formData.append("file", file);
-        formData.append("upload_preset", "acsijtdn");
+        formData.append("upload_preset", "ecommerce-mern-stack");
         fetch(url, {
             method: "POST",
             body: formData,
