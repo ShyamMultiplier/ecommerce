@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://ecommerce-jmcg.onrender.com/api/$1"
+      "destination": "https://ecommerce-1-6xrk.onrender.com/api/$1"
     },
     {
       "source": "/socket.io/(.*)",
-      "destination": "https://ecommerce-jmcg.onrender.com/socket.io/$1"
+      "destination": "https://ecommerce-1-6xrk.onrender.com/socket.io/$1"
     },
     {
       "source": "/(.*)",
