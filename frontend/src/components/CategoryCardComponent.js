@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import { Card, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 const CategoryCardComponent = ({ category, idx }) => {
   
+  useEffect(() => {
+  console.log(category.image);
+}, [category.image]);
   return (
     <Card>
       <Card.Img crossOrigin="anonymous" variant="top" src={category.image ?? null} />

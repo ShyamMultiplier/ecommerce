@@ -47,23 +47,24 @@ const ProductDetailsPageComponent = ({
     }  
   }, [productReviewed])
 
-  useEffect(() => {
-    if (product.images) {
-      var options = {
-        // width: 400,
-        // zoomWidth: 500,
-        // fillContainer: true,
-        // zoomPosition: "bottom",
-        scale: 2,
-        offset: { vertical: 0, horizontal: 0 },
-      };
+  // useEffect(() => {
+  //   if (product.images) {
+  //     var options = {
+  //       // width: 400,
+  //       // zoomWidth: 500,
+  //       // fillContainer: true,
+  //       // zoomPosition: "bottom",
+  //       scale: 2,
+  //       offset: { vertical: 0, horizontal: 0 },
+  //     };
 
-      product.images.map(
-        (image, id) =>
-          new ImageZoom(document.getElementById(`imageId${id + 1}`), options)
-      );
-    }
-  });
+  //     product.images.map(
+  //       (image, id) => {
+  //         new ImageZoom(document.getElementById(`imageId${id+1}`), options);
+  //       }
+  //     );
+  //   }
+  // });
 
   useEffect(() => {
     getProductDetails(id)
@@ -143,7 +144,7 @@ const ProductDetailsPageComponent = ({
                       ({product.reviewsNumber})
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      Price <span className="fw-bold">${product.price}</span>
+                      Price <span className="fw-bold">₹{product.price}</span>
                     </ListGroup.Item>
                     <ListGroup.Item>{product.description}</ListGroup.Item>
                   </ListGroup>
@@ -154,7 +155,7 @@ const ProductDetailsPageComponent = ({
                       Status: {product.count > 0 ? "in stock" : "out of stock"}
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      Price: <span className="fw-bold">${product.price}</span>
+                      Price: <span className="fw-bold">₹{product.price}</span>
                     </ListGroup.Item>
                     <ListGroup.Item>
                       Quantity:

@@ -23,7 +23,7 @@ const ProductForListComponent = ({ productId, name, description, price, images, 
               <Rating readonly size={20} initialValue={rating} /> ({reviewsNumber})
             </Card.Text>
             <Card.Text className="h4">
-              ${price}{" "}
+              ₹{price}{" "}
               <LinkContainer to={`/product-details/${productId}`}>
                 <Button variant="danger">See product</Button>
               </LinkContainer>

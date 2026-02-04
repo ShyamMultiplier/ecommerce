@@ -128,7 +128,7 @@ const UserCartDetailsPageComponent = ({cartItems, itemsCount, cartSubtotal, user
               <h3>Order summary</h3>
             </ListGroup.Item>
             <ListGroup.Item>
-              Items price (after tax): <span className="fw-bold">${cartSubtotal}</span>
+              Items price (after tax): <span className="fw-bold">₹{cartSubtotal}</span>
             </ListGroup.Item>
             <ListGroup.Item>
               Shipping: <span className="fw-bold">included</span>
@@ -137,7 +137,7 @@ const UserCartDetailsPageComponent = ({cartItems, itemsCount, cartSubtotal, user
               Tax: <span className="fw-bold">included</span>
             </ListGroup.Item>
             <ListGroup.Item className="text-danger">
-              Total price: <span className="fw-bold">${cartSubtotal}</span>
+              Total price: <span className="fw-bold">₹{cartSubtotal}</span>
             </ListGroup.Item>
             <ListGroup.Item>
               <div className="d-grid gap-2">

@@ -32,8 +32,8 @@ const UserOrdersPageComponent = ({getOrders}) => {
                 <tr key={idx}>
                   <td>{idx +1}</td>
                   <td>You</td>
-                  <td>{order.createdAt.substring(0, 10)}</td>
-                  <td>{order.orderTotal.cartSubtotal}</td>
+                  <td>{new Date(order.createdAt).toLocaleDateString("en-CA", {timeZone: "Asia/Kolkata"})}</td>
+                  <td>₹{order.orderTotal.cartSubtotal}</td>
                   <td>
                     {order.isDelivered ? <i className="bi bi-check-lg text-success"></i> : <i className="bi bi-x-lg text-danger"></i>}
                   </td>

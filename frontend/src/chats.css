@@ -33,7 +33,10 @@
 
 #check:checked ~ .chat-wrapper {
   opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
+
 
 .chat-wrapper {
   opacity: 0;
@@ -45,7 +48,12 @@
   transition: all 0.4s;
   background-color: #fff;
   border-radius: 5px;
+
+  /* 🔴 ADD THESE */
+  pointer-events: none;
+  transform: translateY(20px);
 }
+
 
 .chat-header {
   background-color: blue;
